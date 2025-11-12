@@ -141,20 +141,20 @@ export default function DashboardPage() {
     const hasTitle = updatedResume.includes(jobTitleGuess);
     return hasTitle
       ? {
-          status: 'pass' as const,
-          message: 'Job title (or close equivalent) appears in your resume summary or experience.',
-        }
+        status: 'pass' as const,
+        message: 'Job title (or close equivalent) appears in your resume summary or experience.',
+      }
       : {
-          status: 'fail' as const,
-          message: `Add the job title or a close match ("${jobTitleGuess.slice(0, 60)}...") to your summary or most relevant role so recruiters can find you by title.`,
-        };
+        status: 'fail' as const,
+        message: `Add the job title or a close match ("${jobTitleGuess.slice(0, 60)}...") to your summary or most relevant role so recruiters can find you by title.`,
+      };
   }, [data, jobTitleGuess]);
 
   if (!improvedData) {
     return (
       <BackgroundContainer className="min-h-screen" innerClassName="bg-zinc-950">
         <div className="flex items-center justify-center h-full p-6 text-gray-400">
-          No improved resume found. Please click "Improve" on the Job Upload page first.
+          No improved resume found. Please click &quot;Improve&quot; on the Job Upload page first.
         </div>
       </BackgroundContainer>
     );
@@ -247,11 +247,10 @@ export default function DashboardPage() {
                       type="button"
                       onClick={() => setViewMode('ats')}
                       disabled={viewMode === 'ats'}
-                      className={`rounded-md border border-gray-700 bg-gray-800/70 p-2 transition-colors ${
-                        viewMode === 'ats'
-                          ? 'cursor-not-allowed opacity-40'
-                          : 'text-gray-200 hover:text-white hover:bg-gray-700'
-                      }`}
+                      className={`rounded-md border border-gray-700 bg-gray-800/70 p-2 transition-colors ${viewMode === 'ats'
+                        ? 'cursor-not-allowed opacity-40'
+                        : 'text-gray-200 hover:text-white hover:bg-gray-700'
+                        }`}
                       aria-label="Show ATS recommendations"
                     >
                       <ChevronLeft className="h-4 w-4" />
@@ -260,11 +259,10 @@ export default function DashboardPage() {
                       type="button"
                       onClick={() => setViewMode('resume')}
                       disabled={viewMode === 'resume'}
-                      className={`rounded-md border border-gray-700 bg-gray-800/70 p-2 transition-colors ${
-                        viewMode === 'resume'
-                          ? 'cursor-not-allowed opacity-40'
-                          : 'text-gray-200 hover:text-white hover:bg-gray-700'
-                      }`}
+                      className={`rounded-md border border-gray-700 bg-gray-800/70 p-2 transition-colors ${viewMode === 'resume'
+                        ? 'cursor-not-allowed opacity-40'
+                        : 'text-gray-200 hover:text-white hover:bg-gray-700'
+                        }`}
                       aria-label="Show resume preview"
                     >
                       <ChevronRight className="h-4 w-4" />
