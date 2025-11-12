@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 const GitHubStarBadge = () => {
-	const githubRepoUrl = 'https://github.com/srbhr/resume-matcher';
+	const githubRepoUrl = 'https://github.com/Pavandeeptec/careerboost-ai';
 
 	return (
 		<Link
@@ -10,7 +10,7 @@ const GitHubStarBadge = () => {
 			rel="noopener noreferrer"
 			className="inline-block group"
 		>
-			<div className="p-[1px] rounded-xl bg-gradient-to-br from-sky-400 to-blue-600">
+			<div className="p-[1px] rounded-xl bg-gradient-to-br from-purple-400 to-pink-600">
 				<span
 					className={`
             inline-flex items-center gap-x-1.5
@@ -18,7 +18,7 @@ const GitHubStarBadge = () => {
             rounded-xl
             text-md
             bg-black text-white
-            group-hover:bg-gradient-to-r group-hover:from-sky-400 group-hover:to-blue-500
+            group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-500
             group-hover:text-black
             transition-colors duration-300 ease-in-out
           `}
@@ -37,7 +37,7 @@ const GitHubStarBadge = () => {
 						/>
 					</svg>
 
-					<span>Star resume matcher on</span>
+					<span>Star on GitHub</span>
 
 					<svg
 						width="22"
