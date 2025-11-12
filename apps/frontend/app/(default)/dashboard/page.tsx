@@ -70,30 +70,24 @@ const mockResumeData = {
 
 export default function DashboardPage() {
   const { improvedData } = useResumePreview();
-  if (!improvedData) {
-    return (
-      <BackgroundContainer className="min-h-screen" innerClassName="bg-zinc-950">
-        <div className="flex items-center justify-center h-full p-6 text-gray-400">
-          No improved resume found. Please click “Improve” on the Job Upload page first.
-        </div>
-      </BackgroundContainer>
-    );
-  }
-
-  const { data } = improvedData;
-  const { resume_preview, new_score, original_score } = data;
-  const preview = resume_preview ?? mockResumeData;
-  const newPct = Math.round(new_score * 100);
-  const originalPct = Math.round((original_score ?? 0) * 100);
   const [viewMode, setViewMode] = useState<'ats' | 'resume'>('ats');
 
+  const data = improvedData?.data;
+  const resume_preview = data?.resume_preview;
+  const new_score = data?.new_score ?? 0;
+  const original_score = data?.original_score ?? 0;
+  const preview = resume_preview ?? mockResumeData;
+  const newPct = Math.round(new_score * 100);
+  const originalPct = Math.round(original_score * 100);
+
   const skillComparison = useMemo(() => {
+    if (!data) return [];
     const stats = (data.skill_comparison ?? []).filter((item) => (item.job_mentions ?? 0) > 0);
     return [...stats].sort((a, b) => {
       if (b.job_mentions !== a.job_mentions) return b.job_mentions - a.job_mentions;
       return b.resume_mentions - a.resume_mentions;
     });
-  }, [data.skill_comparison]);
+  }, [data]);
 
   const personalInfo = preview.personalInfo;
   const contactChecks = useMemo(
@@ -124,7 +118,7 @@ export default function DashboardPage() {
     [preview.education, preview.workExperience, preview.personalProjects]
   );
 
-  const jobDescriptionText = data.job_description ?? '';
+  const jobDescriptionText = data?.job_description ?? '';
   const jobTitleGuess = useMemo(() => {
     if (!jobDescriptionText) return '';
     const firstLine =
@@ -143,7 +137,7 @@ export default function DashboardPage() {
           'Could not detect a job title in the job description. Include it in your summary to improve searchability.',
       };
     }
-    const updatedResume = (data.updated_resume_markdown ?? '').toLowerCase();
+    const updatedResume = (data?.updated_resume_markdown ?? '').toLowerCase();
     const hasTitle = updatedResume.includes(jobTitleGuess);
     return hasTitle
       ? {
@@ -154,7 +148,17 @@ export default function DashboardPage() {
           status: 'fail' as const,
           message: `Add the job title or a close match ("${jobTitleGuess.slice(0, 60)}...") to your summary or most relevant role so recruiters can find you by title.`,
         };
-  }, [data.updated_resume_markdown, jobTitleGuess]);
+  }, [data, jobTitleGuess]);
+
+  if (!improvedData) {
+    return (
+      <BackgroundContainer className="min-h-screen" innerClassName="bg-zinc-950">
+        <div className="flex items-center justify-center h-full p-6 text-gray-400">
+          No improved resume found. Please click "Improve" on the Job Upload page first.
+        </div>
+      </BackgroundContainer>
+    );
+  }
 
   const getStatusIcon = (status: 'pass' | 'fail' | 'warning' | 'info') => {
     const base = 'h-4 w-4';
