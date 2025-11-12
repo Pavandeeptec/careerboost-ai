@@ -45,11 +45,12 @@ Go to: https://vercel.com
 
 ## 📚 Documentation
 
-- **NEXT_STEPS.md** ← Detailed next steps
-- **QUICK_START.md** ← Quick reference
-- **PAVANDEEP_README.md** ← Your personal guide
+- **NEXT_STEPS.md** ← What to do after pushing to GitHub
+- **QUICK_START.md** ← Quick reference commands
+- **VERCEL_DEPLOY.md** ← Deploy to Vercel guide
 - **CUSTOMIZATION_GUIDE.md** ← How to customize more
-- **CHANGES_LOG.md** ← What was changed
+- **CHANGES_LOG.md** ← Complete change history
+- **SETUP.md** ← Full setup instructions
 
 ## 🎨 Your Branding
 
