@@ -5,11 +5,13 @@
 This is your customized version of Resume Matcher with the following modifications:
 
 ### 🎨 Branding Changes
+
 - **App Name**: Changed from "ResumeOptimizer Pro" to "CareerBoost AI"
 - **Color Scheme**: Purple/Pink gradient theme (from emerald/cyan)
 - **Tagline**: "Transform your resume with AI-powered insights and land your dream job faster"
 
 ### 📝 Files Modified
+
 1. `apps/frontend/app/layout.tsx` - Updated metadata and title
 2. `apps/frontend/components/home/hero.tsx` - New branding, colors, and copy
 3. `apps/frontend/components/common/github-star-badge.tsx` - Updated colors
@@ -37,13 +39,16 @@ git push -u origin main
 ### 2. Further Customizations You Can Make
 
 #### Change Colors Further
+
 Edit the gradient colors in:
+
 - `apps/frontend/components/home/hero.tsx` (title gradient)
 - `apps/frontend/components/common/github-star-badge.tsx` (badge colors)
 
 Available Tailwind colors: purple, pink, indigo, violet, fuchsia, rose, blue, cyan, teal, emerald, green, lime, yellow, orange, red
 
 #### Add Your Own Features
+
 - Add a features section to the hero page
 - Create an about page
 - Add testimonials
@@ -51,6 +56,7 @@ Available Tailwind colors: purple, pink, indigo, violet, fuchsia, rose, blue, cy
 - Add analytics tracking
 
 #### Customize Fonts
+
 Edit `apps/frontend/app/layout.tsx` to change fonts from Google Fonts
 
 ### 3. Run and Test
@@ -69,6 +75,7 @@ Visit http://localhost:3000 to see your changes!
 ### 4. Deploy
 
 You can deploy to:
+
 - **Vercel** (recommended for Next.js): `vercel deploy`
 - **Netlify**: Connect your GitHub repo
 - **Railway**: Deploy with one click
@@ -77,6 +84,7 @@ You can deploy to:
 ## Important: Attribution
 
 This project is based on Resume Matcher. Please:
+
 - Keep the LICENSE file
 - Keep the NOTICE file
 - Maintain attribution in README.md

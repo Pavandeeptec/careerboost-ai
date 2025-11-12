@@ -7,11 +7,13 @@ Transform your resume with AI-powered insights and land your dream job faster.
 CareerBoost AI is a customized version of [Resume Matcher](https://github.com/srbhr/Resume-Matcher) by Saurabh Bhardwaj and contributors. The original project is licensed under Apache 2.0, and this fork maintains that license while adding custom modifications.
 
 ### Original Project
+
 - Original Repository: https://github.com/srbhr/Resume-Matcher
 - Original Author: Saurabh Bhardwaj (@srbhr)
 - License: Apache 2.0
 
 ### My Customizations
+
 - 🎨 Custom purple/pink gradient color scheme
 - ✨ Rebranded as "CareerBoost AI"
 - 🎯 Enhanced UI/UX with modern design elements
@@ -38,6 +40,7 @@ CareerBoost AI is a customized version of [Resume Matcher](https://github.com/sr
 Follow the setup instructions in [SETUP.md](SETUP.md) to get started.
 
 Quick start:
+
 ```bash
 # Install dependencies
 npm install
@@ -49,6 +52,7 @@ npm run dev
 ## Author
 
 **Pavandeep**
+
 - GitHub: [@Pavandeeptec](https://github.com/Pavandeeptec)
 - Repository: [CareerBoost AI](https://github.com/Pavandeeptec/careerboost-ai)
 
@@ -69,5 +73,6 @@ Original project contributors: https://github.com/srbhr/Resume-Matcher/graphs/co
 ## Support the Original Project
 
 If you find this useful, please consider supporting the original Resume Matcher project:
+
 - Star the original repo: https://github.com/srbhr/Resume-Matcher
 - Sponsor: https://github.com/sponsors/srbhr

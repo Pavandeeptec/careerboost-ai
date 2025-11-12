@@ -15,6 +15,7 @@
    - Click "Import"
 
 3. **Configure Settings**
+
    ```
    Framework Preset: Next.js (auto-detected)
    Root Directory: apps/frontend ⚠️ IMPORTANT!
@@ -31,17 +32,20 @@
 ## Method 2: CLI (Advanced)
 
 ### Install Vercel CLI:
+
 ```bash
 npm i -g vercel
 ```
 
 ### Deploy:
+
 ```bash
 cd apps/frontend
 vercel
 ```
 
 Follow the prompts:
+
 - Set up and deploy? **Y**
 - Which scope? Choose your account
 - Link to existing project? **N**
@@ -50,6 +54,7 @@ Follow the prompts:
 - Override settings? **N**
 
 ### Deploy to Production:
+
 ```bash
 vercel --prod
 ```
@@ -59,6 +64,7 @@ vercel --prod
 **Root Directory MUST be `apps/frontend`**
 
 Your project structure:
+
 ```
 Resume-Matcher/
 ├── apps/
@@ -69,10 +75,12 @@ Resume-Matcher/
 ## After Deployment
 
 ### Your URLs:
+
 - **Preview**: `careerboost-ai-git-main-pavandeeptec.vercel.app`
 - **Production**: `careerboost-ai.vercel.app`
 
 ### Add Custom Domain (Optional):
+
 1. Go to Project Settings
 2. Click "Domains"
 3. Add your domain
@@ -81,15 +89,18 @@ Resume-Matcher/
 ## Troubleshooting
 
 ### Build Failed?
+
 - Check Root Directory is set to `apps/frontend`
 - Verify Node.js version (18+)
 - Check build logs for errors
 
 ### 404 Error?
+
 - Root Directory might be wrong
 - Should be `apps/frontend`, not root
 
 ### Environment Variables?
+
 For now, frontend works standalone. Backend setup is optional.
 
 ## Next Steps After Deploy

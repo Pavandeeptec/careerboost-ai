@@ -1,12 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import BackgroundContainer from '@/components/common/background-container';
 import FileUpload from '@/components/common/file-upload';
 import ApiKeyMenu from '@/components/settings/api-key-menu';
 
-export default function UploadResume() {
+function UploadResumeContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [checking, setChecking] = useState(true);
@@ -52,5 +52,19 @@ export default function UploadResume() {
         </div>
       </div>
     </BackgroundContainer>
+  );
+}
+
+export default function UploadResume() {
+  return (
+    <Suspense
+      fallback={
+        <BackgroundContainer innerClassName="justify-center">
+          <div className="text-gray-300">Loading…</div>
+        </BackgroundContainer>
+      }
+    >
+      <UploadResumeContent />
+    </Suspense>
   );
 }

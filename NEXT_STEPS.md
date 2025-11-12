@@ -5,6 +5,7 @@ Hey Pavandeep! Your customized resume optimizer is ready to go.
 ## What's Been Done ✅
 
 ### Files Modified:
+
 1. **README.md** - CareerBoost AI branding with your name
 2. **apps/frontend/app/layout.tsx** - Updated metadata
 3. **apps/frontend/components/home/hero.tsx** - Purple/pink theme
@@ -12,6 +13,7 @@ Hey Pavandeep! Your customized resume optimizer is ready to go.
 5. **apps/frontend/package.json** - Package renamed
 
 ### Your Customizations:
+
 - ✅ Brand name: **CareerBoost AI**
 - ✅ Color scheme: **Purple/Pink/Indigo gradient**
 - ✅ GitHub: **@Pavandeeptec**
@@ -21,6 +23,7 @@ Hey Pavandeep! Your customized resume optimizer is ready to go.
 ## 🚀 Push to GitHub (3 Steps)
 
 ### Step 1: Create GitHub Repo
+
 1. Go to https://github.com/new
 2. Repository name: `careerboost-ai`
 3. Description: "AI-powered resume optimizer to land your dream job"
@@ -29,6 +32,7 @@ Hey Pavandeep! Your customized resume optimizer is ready to go.
 6. Click "Create repository"
 
 ### Step 2: Push Your Code
+
 ```bash
 # Remove old remote
 git remote remove origin
@@ -43,6 +47,7 @@ git push -u origin main
 ```
 
 ### Step 3: Verify
+
 Visit: https://github.com/Pavandeeptec/careerboost-ai
 
 ## 💻 Test Locally
@@ -69,12 +74,14 @@ Visit: http://localhost:3000
 ## ✅ Everything is Ready
 
 ### Legal & Ethical ✅
+
 - ✅ Apache 2.0 license maintained
 - ✅ Original authors credited
 - ✅ Your name added as customizer
 - ✅ All license requirements met
 
 ### Already Updated ✅
+
 - ✅ GitHub badge points to your repo
 - ✅ All branding updated
 - ✅ Colors customized
@@ -91,6 +98,7 @@ Visit: http://localhost:3000
 ## 🎨 Make It Even More Yours
 
 ### Easy Customizations:
+
 - Change colors (edit `hero.tsx`)
 - Add your photo/logo
 - Create an About page
@@ -98,6 +106,7 @@ Visit: http://localhost:3000
 - Include testimonials
 
 ### Advanced Features:
+
 - User authentication
 - Payment integration (Stripe)
 - Email notifications

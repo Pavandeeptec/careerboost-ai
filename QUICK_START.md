@@ -69,19 +69,24 @@ Resume-Matcher/
 ## Customize Further
 
 ### Change Colors
+
 Edit `apps/frontend/components/home/hero.tsx`:
+
 ```typescript
 // Current: purple/pink/indigo
 // Try: blue/cyan, red/orange, green/teal, etc.
 ```
 
 ### Add Your Photo/Logo
+
 1. Add image to `apps/frontend/public/`
 2. Import in hero.tsx
 3. Display above title
 
 ### Add Features Section
+
 Create `apps/frontend/components/home/features.tsx`:
+
 ```typescript
 export default function Features() {
   return (
@@ -96,12 +101,14 @@ export default function Features() {
 ## Troubleshooting
 
 **Port already in use?**
+
 ```bash
 # Kill process on port 3000
 npx kill-port 3000
 ```
 
 **Dependencies not installing?**
+
 ```bash
 # Clear cache and reinstall
 npm cache clean --force
@@ -110,6 +117,7 @@ npm install
 ```
 
 **Build errors?**
+
 ```bash
 # Check Node version (needs 18+)
 node --version
@@ -137,6 +145,7 @@ nvm use 18
 ## Questions?
 
 Check out:
+
 - `CUSTOMIZATION_GUIDE.md` - Detailed customization info
 - `CHANGES_LOG.md` - What was changed
 - `PUSH_TO_GITHUB.md` - GitHub setup details
